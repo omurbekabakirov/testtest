@@ -20,6 +20,6 @@ from geektest import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/v1/tasks/', views.task_list_api_view),
-    path('api/v1/tasks/<int:task_id>/', views.task_detail_api_view),
+    path('api/v1/tasks/', views.TaskList.as_view()),
+    path('api/v1/tasks/<int:pk>/', views.TaskDetailList.as_view()),
 ]
